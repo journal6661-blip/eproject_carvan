@@ -1,0 +1,1026 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: myfont;
+    src:url(./RacingMarkRace-Regular.otf);
+}
+
+@font-face {
+    font-family: myfont1;
+    src:url(./Jersey\ M54.ttf);
+}
+
+@font-face {
+    font-family: myfont2;
+    src:url(./MASQUE__.ttf);
+}
+
+@font-face {
+    font-family: digi;
+    src:url(./DS-DIGIB.TTF);
+}
+
+html{
+    font-size: 65.5%;
+}
+:root{
+    --header_color:  radial-gradient(circle, rgb(248, 248, 248) 7%, rgb(137, 137, 136) 88%, rgb(179, 178, 177) 103%);
+    --hover_color:black;
+    --main_color: radial-gradient(circle, rgba(159,159,185,1) 0%, rgba(39,68,98,1) 88%, rgba(1,22,23,1) 100%);
+    --accent-color: white;
+    --text-color: black;
+}
+
+
+.header{
+    width: 100%;
+    position: sticky;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 9.5%;
+    background:  radial-gradient(circle, rgb(248, 248, 248) 7%, rgb(137, 137, 136) 88%, rgb(179, 178, 177) 103%);
+    box-shadow: 0 0 5px rgb(52, 51, 51, 0.5);
+    z-index: 111;
+    transition: 0.4s ease;
+}
+
+.header.sticky{
+    padding: 0 9.5%;
+}
+
+.header .logo img{
+    padding: 0%;
+    background-size: cover;
+    background-position: center;
+    width: 180px;
+}
+
+.header nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+nav .navbar ul li{
+    padding: 2.5rem 0.5rem;
+}
+
+nav .navbar .navLink{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    position: relative;
+}
+nav .navbar .navLink li a {
+    color: var(--text-color);
+    font-family: myfont1;
+    text-decoration: none;
+    font-size: 1.7rem;
+    font-weight: 600;
+    position: relative;
+}
+
+
+nav .others {
+    display: none;
+    align-items: center;
+    gap: 1.5rem;
+}
+nav .others i{
+    font-size: 1.9rem;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+nav .addBtn{
+    border-radius: 20px;
+    display: flex;
+    padding: 0.6rem;
+    background: rgb(79, 79, 79);
+    gap: 0.3rem;
+    font-family: myfont1;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+nav .addBtn:hover{
+    color: rgb(154, 9, 9);
+    background: rgb(0, 0, 0);
+}
+
+#menuBtn{
+    font-size: 3.5rem;
+}
+nav .navbar ul li:hover,
+nav .others i:hover{
+    color: rgb(137, 12, 12);
+}
+
+nav .navbar ul li a:hover,
+nav .navbar ul li a.active{
+    color: rgb(137, 16, 12);
+}
+
+
+@media(max-width:1370px) {
+    nav ,.others{
+        gap: 1rem;
+    }
+
+    nav .navbar .navLink{
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width:1190px){
+    nav .others .addBtn{
+        display: none;
+    }
+}
+
+@media (max-width:991px){
+    nav .navbar .navLink{
+        display: flex;
+        position: absolute;
+        top: 5.3rem;
+        width: 100%;
+        left: 0px;
+        background: var(--header_color);
+        box-shadow: 0 0 5px rgba(190, 190, 190, 0.5),
+        0 0 10px rgba(190, 190, 190, 0.5);
+        padding-left: 30px;
+        transition: 0.5s ease-in-out;
+        display: none;
+    }
+    nav .others {
+        display: flex;
+    }
+
+    nav .others {
+        display: flex;
+    }
+
+    nav .navbar .navLink.active{
+        display: block;
+    }
+
+    .header.sticky{
+        padding: 0.6rem 9.5%;
+    }
+
+    nav .navbar ul li{
+        padding: 1rem 0;
+    }
+
+    nav .navbar ul li .drop-down{
+        position: sticky;
+        display: none;
+    }
+
+
+    nav .others i.cart{
+        display: none;
+    }
+}
+@media(max-width:990px) {
+    .header .logo img {
+        width: 60px;
+    }
+
+    nav .navbar .navLink{
+        top: 4.7rem;
+    }
+}
+
+
+.home .slide{
+    width: 100%;
+    height: 110vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15rem;
+}
+
+.home .slide.slide-one{
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.8), rgb(212, 102, 38)), url(./Premium\ Photo\ _\ Speedometer\ scoring\ high\ speed\ in\ a\ fast\ motion\ blur\ racetrack\ background\ Speeding\ Car\ Background\ Photo\ Concept.jfif);
+    background-repeat: no-repeat;
+    background-size: cover ;
+    background-position: center;
+}
+
+.home .slide.slide-two{
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.8), rgb(0, 0, 0)), url(./Premium\ Photo\ _\ Speedometer\ scoring\ high\ speed\ in\ a\ fast\ motion\ blur\ racetrack\ background\ Speeding\ Car\ Background\ Photo\ Concept.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .slide.slide-three{
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.8), rgb(93, 138, 132)), url(./Premium\ Photo\ _\ Speedometer\ scoring\ high\ speed\ in\ a\ fast\ motion\ blur\ racetrack\ background\ Speeding\ Car\ Background\ Photo\ Concept.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .slide.slide-four{
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.8), rgb(93, 22, 22)), url(./Premium\ Photo\ _\ Speedometer\ scoring\ high\ speed\ in\ a\ fast\ motion\ blur\ racetrack\ background\ Speeding\ Car\ Background\ Photo\ Concept.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .slide .col-1{
+    flex: 1 1 20rem;
+}
+
+.home .slide .col-2{
+    flex: 1 1 40rem;
+    padding-top: 3rem;   
+}
+
+.home .slide .col-1 h4{
+    font-size: 2.5rem;
+    color: rgb(199, 136, 26);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding-bottom: 3rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.home .slide .col-1 h1{
+    color: rgb(213, 209, 209);
+    font-family: myfont2;
+    font-size: 5.2rem;
+    text-transform: capitalize;
+    letter-spacing: 3px;
+}
+
+.home .slide .col-1 h1 span{
+    color: red;
+}
+
+.home .slide .col-1 p{
+    color: rgb(151, 149, 149);
+    font-family: myfont;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    padding-top: 2rem;
+}
+
+.home .slide .col-1 .button{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-top: 4rem;
+}
+
+.home .slide .col-1 .button button{
+    padding: 1.8rem 2.8rem 1.8rem 2rem;
+    font-size: 1.7rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.5s ease;
+}
+
+.home .slide .col-1 .button button i{
+    font-size: 2.5rem;
+    position: absolute;
+    top: 27%;
+    right: -1rem;
+    transform: translate(-40%);
+}
+
+.home .slide .col-1 .button button.about {
+    background: rgb(167, 166, 166);
+    color: var(--text-color);
+    font-family: myfont2;
+}
+
+.home .slide .col-1 .button button.learn{
+    background: rgb(97, 95, 95);
+    color: var(--text-color);
+}
+
+.home .slide .col-1 .button button.learn:hover,
+.home .slide .col-1 .button button.about:hover{
+    background: rgb(137, 12, 12);
+    color: antiquewhite;
+}
+
+.home .slide .col-2 img{
+    width: 100%;
+    height: 42rem;
+    box-shadow:  0 0 50px rgba(11, 8, 8, 0.5);
+    border-radius: 10px;
+}
+
+.home .swiper [class^="swiper-button"] {
+    color: var(--text-color);
+    background: rgb(78, 76, 76);
+    padding: 2.5rem;
+}
+
+.home .swiper [class^="swiper-button"]:hover{
+    background: rgb(36, 36, 36);
+}
+
+.home .swiper [class^="swiper-button"]::before{
+    font-size: 2rem;
+}
+
+@media (max-width:1150px) {
+    .home .slide{
+        height: auto;
+        padding: 5rem 10rem;
+        display: flex;
+    }
+
+    .home .slide .col-2 img{
+        width: 100%;
+        height: 35rem;
+    }
+}
+
+@media (max-width:600px) {
+    .home .slide {
+        padding: 5rem 7rem;
+    }
+    .home .slide .col-1 h4{
+        font-size: 2rem;
+    }
+    .home .slide .col-1 h1{
+        font-size: 3.2rem;
+    }
+
+    .home .slide .col-1 .button button{
+        padding: 1.5rem 2.8rem 1.5rem 2rem;
+        font-size: 1.3rem;
+    }
+
+    .home .slide .col-1 .button .button i{
+        font-size: 2rem;
+    }
+
+    .home .slide .col-2 img{
+        width: 100%;
+        height: 30rem;
+    }
+}
+
+@media (max-width:450px) {
+    .home .slide .col-1 h4{
+        font-size: 1.3rem;
+    }
+
+    .home .slide .col-1 h1{
+        font-size: 2.2rem;
+    }
+}
+
+/*=== perfect section start ===*/
+
+.search{
+    position: relative;
+    padding: 0 0rem;
+    background: var(--main_color);
+}
+
+.search .find{
+
+    border-radius: 50px;
+    width: 1200px;
+    width: 100%;
+    padding: 2rem;
+    position: absolute;
+    top: -4rem;
+    z-index: 111;
+    background:  radial-gradient(circle, rgb(248, 248, 248) 7%, rgb(137, 137, 136) 88%, rgb(179, 178, 177) 103%);
+    box-shadow: 0 0 5px rgba(14, 12, 12, 0.5),
+    0 0 10px rgba(2, 2, 2, 0.5);
+    overflow: hidden;
+}
+
+.find .find-row{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+}
+
+.find h3{
+    font-family: myfont1;
+    font-size: 2.7rem;
+    letter-spacing: 1px;
+    padding-bottom: 2rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.find .find-row h4{
+    font-family: myfont1;
+    font-size: 1.7rem;
+    color: rgb(26, 3, 3);
+    padding-bottom: 1.5rem;
+}
+
+.find .find-row select{
+    border: 1px solid rgb(0, 0, 0);
+    width: 200px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    height: 45px;
+    padding: 0 1rem;
+    color: rgb(152, 23, 6);
+}
+
+.find .find-row select option{
+    padding: 0.5rem;
+    border-bottom: 1px solid rgb(164, 146, 146);
+}
+
+.search .search-btn button{
+    background: rgb(94, 92, 92);
+    margin-top: 4rem;
+    padding: 1.3rem 2rem;
+    border-radius: 0.5rem;
+    font-family: myfont2;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    transition: 0.5s ease;
+}
+
+.search .search-btn button i{
+    padding-right: 0.5rem;
+}
+
+.search .search-btn button:hover{
+    background: rgb(137, 12, 12);
+    color: white;
+}
+
+/*=== market section ===*/
+
+section{
+    padding: 2.5rem 16rem;
+    background: rgb(95, 94, 94);
+    clip-path: polygon(0% 0, 50% 1000%, 100% 0);
+}
+
+.market{
+    padding-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.market .col-3{
+    flex: 1 1 20rem;
+    position: relative;
+}
+
+.market .col-3 img.one{
+    width: 100%;
+    border-radius: 20px;
+    height: 45rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.market .col-4{
+    flex: 1 1 20rem;
+}
+
+.market .col-3 .service{
+    position: absolute;
+    font-family: myfont1;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgb(64, 65, 65);
+    padding: 1rem;
+    border-radius: 20px;
+}
+
+.market .col-3 .service img.two{
+    width: 70px;
+    border-radius: 20px;
+}
+
+.market .col-3 .service span{
+    color: rgb(239, 206, 18);
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.market .col-4 h4{
+    color: rgb(253, 253, 253);
+    font-size: 2rem;
+    letter-spacing: 1px;
+    font-size: 500;
+    padding-bottom: 1rem;
+    font-family: myfont2;
+}
+
+.market .col-4 h4 i{
+    padding-right: 0.5rem;
+}
+
+.market .col-4 h3{
+    font-size: 4rem;
+    color: var(--text-color);
+    padding-bottom: 2rem;
+    font-family: myfont2;
+    text-transform: capitalize;
+}
+
+.market .col-4 h3 span{
+    color: red;
+}
+
+.market .col-4 p.text{
+    font-size: 1.4rem;
+    color: black;
+    padding-bottom: 1rem;
+}
+
+.market .col-4 .p1{
+    font-family: myfont1;
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+    font-weight: 600;
+}
+
+.market .col-4 .p1 i{
+    padding-right: 0.5rem;
+    color: rgb(199, 18, 18);
+    font-size: 1.6rem;
+}
+
+.market .col-4 button{
+    position: relative;
+    margin-top: 2.5rem;
+    background: rgb(143, 142, 142);
+    color: rgb(0, 0, 0);
+    padding: 1.5rem 3.5rem;
+    font-size: 1.6rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: myfont2;
+}
+
+.market .col-4 button i{
+    position: absolute;
+    top: 15px;
+    font-size: 2rem;
+}
+
+.market .col-4 button i:hover{
+    transform: translateX(20%);
+}
+
+.market .col-4 button:hover{
+    background: rgb(137, 12, 12);
+    color: white;
+}
+
+@media (max-width:2500px) {
+    .search .find {
+        max-width: 100%;
+    }
+
+    .search {
+        padding: 0 0;
+    }
+}
+
+@media (max-width:991px) {
+    .find .find-row {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .market{
+        padding-top: 40rem;
+    }
+
+    section{
+        padding: 2.5rem 10rem;
+    }
+}
+
+@media (max-width:768px) {
+    .find .find-row {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .market{
+        padding-top: 50rem;
+    }
+} 
+
+@media (max-width:600px){
+    section{
+        padding: 2.5rem 7rem;
+    }
+    .find .find-row {
+        gap: 0.5rem;
+    }
+
+    .market .col-4 h3{
+        font-size: 2.9rem;
+    }
+}
+
+@media (max-width:450px) {
+    .find .find-row{
+        grid-template-columns: 1fr;
+    }
+
+    .find .find-row select{
+        width: 100%;
+    }
+
+    .market .col-3 img.one{
+        height: 35rem;
+    }
+
+    .market{
+        padding-top: 80rem;
+    }
+
+    .market .col-4 h3{
+        font-size: 2.4rem;
+    }
+}
+
+/*=== counter section ===*/
+
+.counter{
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    width: 100%;
+    min-height: 50vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+    background: radial-gradient(circle, rgba(4,3,14,1) 0%, rgb(21, 20, 20) 69%, rgba(9,12,13,1) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.counter .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.counter .container img{
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: rgb(166, 14, 9);
+    padding: 0.5rem;
+}
+
+.counter .container span.num{
+    padding: 1rem 0;
+    font-family: digi;
+    font-size: 4.6rem;
+    font-weight: 600;
+    color: rgb(195, 150, 37);
+}
+
+.counter .container span.text{
+    color: rgb(163, 14, 14);
+    font-family: myfont2;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.counter .container span.text i{
+    padding-right: 0.5rem;
+}
+
+@media (max-width:1280px) {
+    .counter {
+        padding: 2rem 10rem;
+    }
+}
+
+@media (max-width:991px) {
+    .counter {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width:768px) {
+    .counter {
+        padding: 2rem 7rem;
+    }
+}
+
+
+/*=== arrival section ===*/
+
+.arrivals{
+    text-align: center;
+    padding-top: 7rem;
+}
+
+section h4{
+    color: rgb(255, 238, 0);
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding-bottom: 1.5rem;
+    font-weight: 600;
+    font-family: myfont;
+    letter-spacing: 2px;
+}
+
+section h4 i {
+    padding-right: 0.5rem;
+}
+
+section h1{
+    font-family: myfont;
+    padding-bottom: 4rem;
+    font-size: 4.7rem;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    color: var(--text-color);
+}
+
+section h1 span {
+    color: red;
+}
+
+.arrivals .arr-row{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2.5rem;
+}
+
+.arr-row .arr-col{
+    padding: 1rem;
+    box-shadow: 0 0 5px black;
+    background: rgb(194, 192, 192);
+    border-radius: 10px;
+    text-align: justify;
+}
+
+.arr-row .arr-col .image{
+    width: 100%;
+    height: 20rem;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: 0.5s ease;
+}
+
+.arr-row .arr-col .image img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.5s ease;
+}
+
+.arr-row .arr-col .image:hover img{
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
+.arr-row .arr-col h5{
+    font-size: 1.8rem;
+    font-family: myfont1;
+    padding: 1rem 0;
+    color: rgb(137, 12, 12);
+}
+
+.arr-row .arr-col .rating{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding-bottom: 0.5rem;
+}
+
+.arr-col .rating .stars i{
+    color: black;
+    font-size: 1.4rem;
+}
+
+.arr-col .rating .review span{
+    font-size: 1.3rem;
+    font-family: digi;
+    font-weight: 600;
+    color: rgb(5, 148, 187);
+}
+
+.arr-col .features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.arr-col .features span{
+    font-size: 1.4rem;
+    font-family: myfont1;
+    color: rgb(67, 64, 64);
+}
+
+.arr-col .features span i{
+    color: rgb(137, 12, 12);
+    padding-right: 0.3rem;
+}
+
+.arr-col .price{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.arr-col .price p{
+    font-family: digi;
+    color: rgb(137, 12, 12);
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.arr-col .price button{
+    background: rgb(73, 73, 73);
+    font-family: myfont;
+    padding: 0.8rem 2.8rem;
+    color: white;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.arr-col .price button:hover{
+    background-color: rgb(0, 0, 0);
+    color: rgb(254, 0, 0);
+}
+
+@media (max-width:1350px) {
+    .arrivals .arr-row {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width:768px) {
+    .arrivals .arr-row {
+        grid-template-columns: 1fr;
+    }
+
+    .arr-row .arr-col .image {
+        height: auto;
+    }
+
+    section h1{
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width:450px) {
+    section h1{
+        font-size: 2.4rem;
+    }
+}
+
+
+
+/*----body type section----*/
+
+
+
+/*----------- footer section -------*/
+
+.footer{
+    background: rgb(116, 115, 115);
+    border-top-left-radius: 50px;
+    border-top: 2px solid black;
+    box-shadow: 0 2px 10px black;
+}
+
+.footer .footer-row{
+    padding: 2rem 16rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+.footer-row .footer-col img{
+    width: 250px;
+    height: 50px;
+    margin-bottom: 1rem;
+}
+
+.footer-row .footer-col p{
+    color: rgb(70, 4, 4);
+    font-family: myfont1;
+    font-size: 1.5rem;
+    padding-bottom: 0.2rem;
+}
+
+.footer-row .footer-col span{
+    display: block;
+    color: rgb(0, 0, 0);
+    font-size: 1.6rem;
+    padding-bottom: 1rem;
+}
+
+.footer-row .footer-col span i{
+    background: rgb(255, 242, 0);
+    border-radius: 10px;
+    padding: 0.5rem;
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+.footer-row .footer-col h5{
+    color: rgb(0, 0, 0);
+    font-family: myfont;
+    font-size: 1.9rem;
+    margin: 1rem 0;
+    padding: 0.5rem;
+    letter-spacing: 1px;
+    position: relative;
+    border-bottom: 5px solid black;
+}
+
+.footer-row .footer-col a{
+    display: block;
+    font-family: myfont1;
+    color: rgb(0, 0, 0);
+    font-size: 1.6rem;
+    padding-top: 1rem;
+    transition: 0.4s ease;
+}
+
+.footer-col .links i{
+    color: rgb(12, 35, 137);
+    padding-right: 3px;
+}
+
+.footer-row .footer-col a:hover{
+    color: rgb(246, 6, 6);
+    transform: translateX(5%);
+}
+
+
+@media (max-width:1390px) {
+    .footer-row .footer-col p{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width:1030px) {
+    .footer .footer-row{
+        padding: 2rem 5rem;
+    }
+}
+
+@media (max-width:870px) {
+    .footer .footer-row{
+        gap: 1rem;
+        grid-template-columns: 1fr 1fr;
+        padding: 2rem 2rem;
+    }
+}
+
+@media (max-width:671px) {
+    .footer .footer-row{
+        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+}

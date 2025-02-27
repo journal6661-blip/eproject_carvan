@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARVAN</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="sedan.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!-- META KEYWORDS -->
+<META NAME="KEYWORDS" CONTENT="BUY CARS ONLINE, CAR SALES, NEW CARS, USED CARS, CAR DEALERSHIP, AFFORDABLE CARS, LUXURY CARS, ONLINE CAR SHOPPING, VEHICLE LISTINGS">
+
+    <!-- META AUTHOR -->
+    <META NAME="AUTHOR" CONTENT="Carvan Auto Sales">
+    
+    <!-- META DESCRIPTION -->
+    <META NAME="DESCRIPTION" CONTENT="Find your perfect car at Carvan! We offer a wide selection of new and used vehicles with competitive prices. Browse our inventory online and enjoy a seamless car-buying experience with fast, reliable service.">
+    
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <a href="./index.html"><img src="./2cc.png" alt=""></a>
+        </div>
+        <nav>
+            <div class="navbar">
+                    <ul class="navLink">
+                      <li><a href="./index.html">Home</a></li>
+                      <li><a href="./aboutus.html">About</a></li>
+                      <li><a href="#" class="nav-link active">Classifieds</a></li>
+                      <li><a href="./brands.html">Brands Info</a></li>
+                      <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+            </div>
+            <button class="addBtn" onclick="alert('FOR SELLING VISIT OUR DEALERSHIP')"><i class='bx bx-plus-circle'></i>add Listing</button>
+            <div class="others">
+                <i class='bx bx-menu-alt-left' id="menuBtn"></i>
+            </div>
+        </nav>
+    </header>
+
+    <section class="arrivals">
+        <div class="search">
+            <div class="find">
+                <h3>Range of <span style="color: rgb(107, 8, 8);">Car's</span></h3>
+                <div class="find-row">
+                    <div class="find-item">
+                        <h4>Car Condition</h4>
+                        <select id="condition">
+                            <option value="">All Status</option>
+                            <option value="New Car">New Car</option>
+                            <option value="Used Car">Used Car</option>
+                        </select>
+                    </div>
+                    <div class="find-item">
+                        <h4>Brand Name</h4>
+                        <select id="brand">
+                            <option value="">All Brand</option>
+                            <option value="BMW">BMW</option>
+                            <option value="Toyota">Toyota</option>
+                            <option value="Audi">Audi</option>
+                            <option value="Nissan">Nissan</option>
+                            <option value="Lexus">Lexus</option>
+                            <option value="Porsche">Porsche</option>
+                            <option value="Honda">Honda</option>
+                            <option value="Lamborghini">Lamborghini</option>
+                        </select>
+                    </div>
+
+                    <div class="find-item">
+                        <h4>Model-Year</h4>
+                        <select id="year">
+                            <option value="">All Year</option>
+                            <option value="2025">2025</option>
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                        </select>
+                    </div>
+                    <div class="find-item">
+                        <h4>Price Range</h4>
+                        <select id="price">
+                            <option value="">All Price</option>
+                            <option value="10000-50000">$10,000-$50,000</option>
+                            <option value="50000-100000">$50,000-$100,000</option>
+                            <option value="100000-1000000">$100,000-$1,000,000</option>
+                        </select>
+                    </div>
+                    <div class="find-item">
+                        <h4>Body-Type</h4>
+                        <select id="bodytype">
+                            <option value="">All Body-Type</option>
+                            <option value="Sedan">Sedan</option>
+                            <option value="Van">Van</option>
+                            <option value="Jeeps/Suv">Jeeps/Suv</option>
+                            <option value="Hatch-Back">Hatch-Back</option>
+                        </select>
+                    </div>
+    
+                    <div class="search-btn">
+                        <button onclick="filterCars()"><i class="bx bx-search"></i>Find Your Next Wheels</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="arr-row">
+            <div class="arr-col" data-condition="New Car" data-brand="Lamborghini" data-year="2025" data-price="700000" data-bodytype="Sedan">
+                <div class="image">
+                    <img src="./CARS CAR LAMBORGHINI VENENO AVENTADOR URUS.jfif" alt="">
+                </div>
+
+                <h5>Lamborghini Huracan</h5>
+                <div class="rating">
+                    <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
+                    </div>
+                    <div class="review">
+                        <span>4.5/5 (5k Review)</span>
+                    </div>
+                </div>
+                <div class="features">
+                    <span><i class='bx bx-cog' ></i>Automatic</span>
+                    <span><i class='bx bx-label' ></i>80k Miles</span>
+                    <span><i class='bx bx-car' ></i>Model 2025</span>
+                    <span><i class='bx bx-error-circle' ></i>7S-Dual-Clutch</span>
+                </div>
+                <div class="price1">
+                    <p>$700,000</p>
+                    <button onclick="alert('FOR PURCHASE KINDLY VISIT OUR DEALERSHIP')">Buy Now</button>
+
+                </div>
+            </div>
+
+            <div class="arr-col"  data-condition="Used Car" data-brand="BMW" data-year="2021" data-price="180000" data-bodytype="Sedan">
+                <div class="image">
+                    <img src="./BMW M4 Competition G82.jfif" alt="">
+                </div>
+
+                <h5>BMW M4 Competition</h5>
+                <div class="rating">
+                    <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
+                        <i class='bx bx-star' ></i>
+                    </div>
+                    <div class="review">
+                        <span>3.8/5 (3.7k Review)</span>
+                    </div>
+                </div>
+                <div class="features">
+                    <span><i class='bx bx-cog' ></i>Automatic</span>
+                    <span><i class='bx bx-label' ></i>50k Miles</span>
+                    <span><i class='bx bx-car' ></i>Model 2021</span>
+                    <span><i class='bx bx-error-circle' ></i>Twin-Turbo</span>
+                </div>
+                <div class="price1">
+                    <p>$180,000</p>
+                    <button onclick="alert('FOR PURCHASE KINDLY VISIT OUR DEALERSHIP')">Buy Now</button>
+                </div>
+            </div>
+
+
+            <div class="arr-col"  data-condition="New Car" data-brand="Toyota" data-year="2025" data-price="500000"  data-bodytype="Jeeps/Suv">
+                <div class="image">
+                    <img src="./ギャラリー：新型ランドクルーザー、驚異のこだわりとは？ 4年待ってでも買うべきオフローダーである！.jfif" alt="">
+                </div>
+
+                <h5>Toyota LC300 GR-S</h5>
+                <div class="rating">
+                    <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                    </div>
+                    <div class="review">
+                        <span>5.0/5 (10k Review)</span>
+                    </div>
+                </div>
+                <div class="features">
+                    <span><i class='bx bx-cog' ></i>Automatic</span>
+                    <span><i class='bx bx-label' ></i>20k Miles</span>
+                    <span><i class='bx bx-car' ></i>Model 2025</span>
+                    <span><i class='bx bx-error-circle' ></i>Twin-Turbo</span>
+                </div>
+                <div class="price1">
+                    <p>$500,000</p>
+                    <button onclick="alert('FOR PURCHASE KINDLY VISIT OUR DEALERSHIP')">Buy Now</button>
+                </div>
+            </div>
+
+
+            <div class="arr-col"  data-condition="Used Car" data-brand="Nissan" data-year="2022" data-price="200000"  data-bodytype="Sedan">
+                <div class="image">
+                    <img src="./gtr35.jpg" alt="">
+                </div>
+
+                <h5>Nissan G-TR R35</h5>
+                <div class="rating">
+                    <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bx-star' ></i>
+                    </div>
+                    <div class="review">
+                        <span>4.0/5 (7.7k Review)</span>
+                    </div>
+                </div>
+                <div class="features">
+                    <span><i class='bx bx-cog' ></i>Manual</span>
+                    <span><i class='bx bx-label' ></i>130k Miles</span>
+                    <span><i class='bx bx-car' ></i>Model 2022</span>
+                    <span><i class='bx bx-error-circle' ></i>AWD</span>
+                </div>
+                <div class="price1">
+                    <p>$200,000</p>
+                    <button onclick="alert('FOR PURCHASE KINDLY VISIT OUR DEALERSHIP')">Buy Now</button>
+                </div>
+            </div>
+
+
+            <div class="arr-col"  data-condition="Used Car" data-brand="Lamborghini" data-year="2023" data-price="250000"  data-bodytype="Jeeps/Suv">
+                <div class="image">
+                    <img src="./Lamborghini.jfif" alt="">
+                </div>
+
+                <h5>Lamborghini URUS</h5>
+                <div class="rating">
+                    <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bx-star' ></i>
+                        <i class='bx bx-star' ></i>
+                    </div>
+                    <div class="review">
+                        <span>3.0/5 (12k Review)</span>
+                    </div>
+                </div>
+                <div class="features">
+                    <span><i class='bx bx-cog' ></i>Automatic</span>
+                    <span><i class='bx bx-label' ></i>10k Miles</span>
+                    <span><i class='bx bx-car' ></i>Model 2023</span>
+                    <span><i class='bx bx-error-circle' ></i>V8</span>
+                </div>
+                <div class="price1">
+                    <p>$250,000</p>
+                    <button onclick="alert('FOR PURCHASE KINDLY VISIT OUR DEALERSHIP')">Buy Now</button>
+                </div>
+            </div>
+
+            <div class="arr-col"  data-condition="Used Car" data-brand="Lexus" data-year="2024" data-price="600000"  data-bodytype="Jeeps/Suv">
+                <div class="image">
+                    <img src="./Lexus lx570 black.jfif" alt="">
+                </div>
+
+                <h5>Lexus LX570</h5>
+                <div class="rating">
+                    <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                    </div>
+                    <div class="review">
+                        <span>5.0/5 (15k Review)</span>
+                    </div>
+                </div>
+                <div class="features">
+                    <span><i class='bx bx-cog' ></i>Automatic</span>
+                    <span><i class='bx bx-label' ></i>5k Miles</span>
+                    <span><i class='bx bx-car' ></i>Model 2024</span>
+                    <span><i class='bx bx-error-circle' ></i>IMHEV T-Turbo</span>
+                </div>
+                <div class="price1">
+                    <p>$600,000</p>
+                    <button onclick="alert('FOR PURCHASE KINDLY VISIT OUR DEALERSHIP')">Buy Now</button>
+                </div>
+            </div>
+
+            <div class="arr-col" data-condition="Used Car" data-brand="Porsche" data-year="2020" data-price="70000"  data-bodytype="Jeeps/Suv">
+                <div class="image">
+                    <img src="./40eaec30-ccf1-4aab-adb7-80a1a7fa34b2.jfif" alt="">
+                </div>
+
+                <h5>Porsche Cayenne</h5>
+                <div class="rating">
+                    <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
+                        <i class='bx bx-star' ></i>
+                        <i class='bx bx-star' ></i>
+                    </div>
+                    <div class="review">
+                        <span>2.5/5 (10.1k Review)</span>
+                    </div>
+                </div>
+                <div class="features">
+                    <span><i class='bx bx-cog' ></i>Automatic</span>
+                    <span><i class='bx bx-label' ></i>200k Miles</span>
+                    <span><i class='bx bx-car' ></i>Model 2020</span>
+                    <span><i class='bx bx-error-circle' ></i>V8 Turbo</span>
+                </div>
+                <div class="price1">
+                    <p>$70,000</p>
+                    <button onclick="alert('FOR PURCHASE KINDLY VISIT OUR DEALERSHIP')">Buy Now</button>
+                </div>
+            </div>
+
+            <div class="arr-col" data-condition="Used Car" data-brand="Honda" data-year="2021" data-price="35000" data-bodytype="Hatch-Back">
+                <div class="image">
+                    <img src="./This Is What a 2023 Spoon Sports Honda Civic Type R Could Look Like.jfif" alt="">
+                </div>
+                <h5>Honda Civic TYPE-R</h5>
+                <div class="rating">
+                    <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bx-star' ></i>
+                        <i class='bx bx-star' ></i>
+                        <i class='bx bx-star' ></i>
+                    </div>
+                    <div class="review">
+                        <span>2.0/5 (20k Review)</span>
+                    </div>
+                </div>
+                <div class="features">
+                    <span><i class='bx bx-cog' ></i>Manual</span>
+                    <span><i class='bx bx-label' ></i>332k Miles</span>
+                    <span><i class='bx bx-car' ></i>Model 2021</span>
+                    <span><i class='bx bx-error-circle' ></i>Turbo Charger</span>
+                </div>
+                <div class="price1">
+                    <p>$35,000</p>
+                    <button onclick="alert('FOR PURCHASE KINDLY VISIT OUR DEALERSHIP')">Buy Now</button>
+                </div>
+            </div>
+            <div class="arr-col" data-condition="Used Car" data-brand="Audi" data-year="2020" data-price="80000"  data-bodytype="Sedan">
+                <div class="image">
+                    <img src="./audi a3.jfif" alt="">
+                </div>
+
+                <h5>AUDI A3</h5>
+                <div class="rating">
+                    <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
+                        <i class='bx bx-star' ></i>
+                        <i class='bx bx-star' ></i>
+                    </div>
+                    <div class="review">
+                        <span>2.9/6 (10.1k Review)</span>
+                    </div>
+                </div>
+                <div class="features">
+                    <span><i class='bx bx-cog' ></i>Automatic</span>
+                    <span><i class='bx bx-label' ></i>20k Miles</span>
+                    <span><i class='bx bx-car' ></i>Model 2020</span>
+                    <span><i class='bx bx-error-circle' ></i>Turbo</span>
+                </div>
+                <div class="price1">
+                    <p>$80,000</p>
+                    <button onclick="alert('FOR PURCHASE KINDLY VISIT OUR DEALERSHIP')">Buy Now</button>
+                </div>
+            </div>
+            <div class="arr-col" data-condition="New Car" data-brand="Lexus" data-year="2025" data-price="90000"  data-bodytype="Van">
+                <div class="image">
+                    <img src="./lexus lm.jfif" alt="">
+                </div>
+
+                <h5>LEXUS LM</h5>
+                <div class="rating">
+                    <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                    </div>
+                    <div class="review">
+                        <span>5/5 (101.1k Review)</span>
+                    </div>
+                </div>
+                <div class="features">
+                    <span><i class='bx bx-cog' ></i>Automatic</span>
+                    <span><i class='bx bx-label' ></i>200k Miles</span>
+                    <span><i class='bx bx-car' ></i>Model 2025</span>
+                    <span><i class='bx bx-error-circle' ></i>V8 Turbo</span>
+                </div>
+                <div class="price1">
+                    <p>$90,000</p>
+                    <button onclick="alert('FOR PURCHASE KINDLY VISIT OUR DEALERSHIP')">Buy Now</button>
+                </div>
+            </div>
+            <div class="arr-col" data-condition="Used Car" data-brand="Audi" data-year="2023" data-price="20000"  data-bodytype="Hatch-Back">
+                <div class="image">
+                    <img src="./audi hat.jfif" alt="">
+                </div>
+
+                <h5>AUDI RS Q</h5>
+                <div class="rating">
+                    <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bx-star' ></i>
+                        <i class='bx bx-star' ></i>
+                    </div>
+                    <div class="review">
+                        <span>3/5 (100.1k Review)</span>
+                    </div>
+                </div>
+                <div class="features">
+                    <span><i class='bx bx-cog' ></i>Automatic</span>
+                    <span><i class='bx bx-label' ></i>10k Miles</span>
+                    <span><i class='bx bx-car' ></i>Model 2023</span>
+                    <span><i class='bx bx-error-circle' ></i>Twin-Turbo</span>
+                </div>
+                <div class="price1">
+                    <p>$20,000</p>
+                    <button onclick="alert('FOR PURCHASE KINDLY VISIT OUR DEALERSHIP')">Buy Now</button>
+                </div>
+            </div>
+            
+        </div>
+
+
+    </section>
+ <!-- footer section --------->
+
+ <div class="footer">
+    <div class="footer-row">
+        <div class="footer-col">
+            <a href="./index.html"><img src="./2cc.png" alt=""></a>
+            <p class="text">"Carvan Hassle-free car buying, selling, and trade-ins with trusted transparency and instant deals."</p>
+            <p><i class="bx bxs-chevron-right"></i>Get an accurate online quote for your car.</p>
+            <p><i class="bx bxs-chevron-right"></i>Ensure peace of mind with comprehensive history and inspection reports for all cars.</p>
+            <p><i class="bx bxs-chevron-right"></i>Enjoy 24/7 assistance from our dedicated team.</p>
+        </div>
+        <div class="footer-col">
+            <h5>Platform</h5>
+            <a href="./aboutus.html"><i class="bx bxs-error-circle"></i>About Us</a>
+            <p>"Your trusted destination for buying and selling cars."</p>
+            <a href="./aboutus.html"><i class="bx bxs-calendar-event"></i>Events</a>
+            <p>"Explore our vibrant lineup of upcoming events and revisit the highlights from previous ones. Stay informed about exciting future gatherings."</p>
+        </div>
+        <div class="footer-col">
+            <h5>Support Center</h5>
+            <a href="./contact.html"><i class="bx bxs-phone"></i>Contact Us</a>
+            <p>"Have questions? Reach us."</p>
+            <a href="./contact.html"><i class='bx bxs-message-rounded-minus'></i>For Complaint</a>
+            <p>"Our dedicated support team is here to assist you every step of the way. Whether you have questions about our services, need help with bookings or registrations, or require assistance during an event, we’re just a call or message away. With 24/7 availability, quick response times, and a commitment to resolving your concerns, we ensure a seamless and stress-free experience."</p>
+
+        </div>
+        <div class="footer-col">
+            <h5>Quick Links</h5>
+            <span><i class="bx bxs-phone"></i>+92 987654321</span>
+            <a href="https://mail.google.com/mail/u/0/?ogbl#inbox?compose=CllgCJlDTRNsVxGGqsDpFHWlzFwlMZtlxrPSHKfWhxJmKpLDGgcVgSGFXVMFsvwWDgmlkWJkJBB" class="links"><i class='bx bxl-gmail' ></i>hashamaptech@gmail.com</a>
+            <a href="https://www.facebook.com" class="links"><i class='bx bxl-facebook' ></i>Carvan</a>
+            <a href="https://www.telegram.com/" class="links"><i class='bx bxl-telegram' ></i>Carvan.Te</a>
+            <a href="https://www.youtube.com/" class="links"><i class='bx bxl-youtube' ></i>Carvan.Motors</a>
+
+        </div>
+    </div>
+
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="java.js"></script>
+</body>
+</html>
